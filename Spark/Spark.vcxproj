@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|x64">
+      <Configuration>Test</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{26081C0E-921C-44BF-5B9E-E71EC77140F0}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Spark</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\bin\Debug-windows-x86_64\Spark\</OutDir>
+    <IntDir>..\bin-int\Debug-windows-x86_64\Spark\</IntDir>
+    <TargetName>Spark</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\bin\Test-windows-x86_64\Spark\</OutDir>
+    <IntDir>..\bin-int\Test-windows-x86_64\Spark\</IntDir>
+    <TargetName>Spark</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\Release-windows-x86_64\Spark\</OutDir>
+    <IntDir>..\bin-int\Release-windows-x86_64\Spark\</IntDir>
+    <TargetName>Spark</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>sppch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;GLFW_INCLUDE_NONE;SP_DEBUG;SP_ASSERT_ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;src;vendor\glfw\include;vendor\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\bin\Debug-windows-x86_64\Spark\Spark.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF NOT EXIST ..\bin\Debug-windows-x86_64\Sparkle (mkdir ..\bin\Debug-windows-x86_64\Sparkle)
+copy /B /Y ..\bin\Debug-windows-x86_64\Spark\Spark.dll ..\bin\Debug-windows-x86_64\Sparkle\Spark.dll</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>sppch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;src;vendor\glfw\include;vendor\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\bin\Test-windows-x86_64\Spark\Spark.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF NOT EXIST ..\bin\Test-windows-x86_64\Sparkle (mkdir ..\bin\Test-windows-x86_64\Sparkle)
+copy /B /Y ..\bin\Test-windows-x86_64\Spark\Spark.dll ..\bin\Test-windows-x86_64\Sparkle\Spark.dll</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>sppch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;GLFW_INCLUDE_NONE;SP_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;src;vendor\glfw\include;vendor\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\bin\Release-windows-x86_64\Spark\Spark.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF NOT EXIST ..\bin\Release-windows-x86_64\Sparkle (mkdir ..\bin\Release-windows-x86_64\Sparkle)
+copy /B /Y ..\bin\Release-windows-x86_64\Spark\Spark.dll ..\bin\Release-windows-x86_64\Sparkle\Spark.dll</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Spark.h" />
+    <ClInclude Include="lib\splog\Platform\Windows\splogWindowsConfig.h" />
+    <ClInclude Include="lib\splog\splog.h" />
+    <ClInclude Include="lib\splog\splogConfig.h" />
+    <ClInclude Include="lib\splog\splogCore.h" />
+    <ClInclude Include="lib\splog\splogDecl.h" />
+    <ClInclude Include="lib\splog\splogLogger.h" />
+    <ClInclude Include="lib\splog\splogParsing.h" />
+    <ClInclude Include="src\Core\Basics.h" />
+    <ClInclude Include="src\Core\Layer.h" />
+    <ClInclude Include="src\Core\Log.h" />
+    <ClInclude Include="src\Core\SparkleRel\Application.h" />
+    <ClInclude Include="src\Core\SparkleRel\MainEntry.h" />
+    <ClInclude Include="src\Core\Window.h" />
+    <ClInclude Include="src\Event\ApplicationEvent.h" />
+    <ClInclude Include="src\Event\Event.h" />
+    <ClInclude Include="src\Event\KeyEvent.h" />
+    <ClInclude Include="src\Event\MouseEvent.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\sppch.h" />
+    <ClInclude Include="vendor\GLAD\include\KHR\khrplatform.h" />
+    <ClInclude Include="vendor\GLAD\include\glad\glad.h" />
+    <ClInclude Include="vendor\glfw\deps\getopt.h" />
+    <ClInclude Include="vendor\glfw\deps\glad\gl.h" />
+    <ClInclude Include="vendor\glfw\deps\glad\gles2.h" />
+    <ClInclude Include="vendor\glfw\deps\glad\vulkan.h" />
+    <ClInclude Include="vendor\glfw\deps\linmath.h" />
+    <ClInclude Include="vendor\glfw\deps\mingw\_mingw_dxhelper.h" />
+    <ClInclude Include="vendor\glfw\deps\mingw\dinput.h" />
+    <ClInclude Include="vendor\glfw\deps\mingw\xinput.h" />
+    <ClInclude Include="vendor\glfw\deps\nuklear.h" />
+    <ClInclude Include="vendor\glfw\deps\nuklear_glfw_gl2.h" />
+    <ClInclude Include="vendor\glfw\deps\stb_image_write.h" />
+    <ClInclude Include="vendor\glfw\deps\tinycthread.h" />
+    <ClInclude Include="vendor\glfw\deps\vs2008\stdint.h" />
+    <ClInclude Include="vendor\glfw\include\GLFW\glfw3.h" />
+    <ClInclude Include="vendor\glfw\include\GLFW\glfw3native.h" />
+    <ClInclude Include="vendor\glfw\src\cocoa_joystick.h" />
+    <ClInclude Include="vendor\glfw\src\cocoa_platform.h" />
+    <ClInclude Include="vendor\glfw\src\cocoa_time.h" />
+    <ClInclude Include="vendor\glfw\src\internal.h" />
+    <ClInclude Include="vendor\glfw\src\linux_joystick.h" />
+    <ClInclude Include="vendor\glfw\src\mappings.h" />
+    <ClInclude Include="vendor\glfw\src\null_joystick.h" />
+    <ClInclude Include="vendor\glfw\src\null_platform.h" />
+    <ClInclude Include="vendor\glfw\src\platform.h" />
+    <ClInclude Include="vendor\glfw\src\posix_poll.h" />
+    <ClInclude Include="vendor\glfw\src\posix_thread.h" />
+    <ClInclude Include="vendor\glfw\src\posix_time.h" />
+    <ClInclude Include="vendor\glfw\src\win32_joystick.h" />
+    <ClInclude Include="vendor\glfw\src\win32_platform.h" />
+    <ClInclude Include="vendor\glfw\src\win32_thread.h" />
+    <ClInclude Include="vendor\glfw\src\win32_time.h" />
+    <ClInclude Include="vendor\glfw\src\wl_platform.h" />
+    <ClInclude Include="vendor\glfw\src\x11_platform.h" />
+    <ClInclude Include="vendor\glfw\src\xkb_unicode.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Core\Layer.cpp" />
+    <ClCompile Include="src\Core\Log.cpp" />
+    <ClCompile Include="src\Core\SparkleRel\Application.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\sppch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="vendor\glfw\GLFW.vcxproj">
+      <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\GLAD\GLAD.vcxproj">
+      <Project>{5D4A857C-4981-860D-F26D-6C10DE83020F}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sparkle", "Sparkle\Sparkle.vcxproj", "{F7B73E05-6397-BDA0-6CAF-4877D80D2402}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLAD", "Spark\vendor\GLAD\GLAD.vcxproj", "{5D4A857C-4981-860D-F26D-6C10DE83020F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLFW", "Spark\vendor\glfw\GLFW.vcxproj", "{154B857C-0182-860D-AA6E-6C109684020F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Spark", "Spark\Spark.vcxproj", "{26081C0E-921C-44BF-5B9E-E71EC77140F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+		Test|x64 = Test|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7B73E05-6397-BDA0-6CAF-4877D80D2402}.Debug|x64.ActiveCfg = Debug|x64
+		{F7B73E05-6397-BDA0-6CAF-4877D80D2402}.Debug|x64.Build.0 = Debug|x64
+		{F7B73E05-6397-BDA0-6CAF-4877D80D2402}.Release|x64.ActiveCfg = Release|x64
+		{F7B73E05-6397-BDA0-6CAF-4877D80D2402}.Release|x64.Build.0 = Release|x64
+		{F7B73E05-6397-BDA0-6CAF-4877D80D2402}.Test|x64.ActiveCfg = Test|x64
+		{F7B73E05-6397-BDA0-6CAF-4877D80D2402}.Test|x64.Build.0 = Test|x64
+		{5D4A857C-4981-860D-F26D-6C10DE83020F}.Debug|x64.ActiveCfg = Debug|x64
+		{5D4A857C-4981-860D-F26D-6C10DE83020F}.Debug|x64.Build.0 = Debug|x64
+		{5D4A857C-4981-860D-F26D-6C10DE83020F}.Release|x64.ActiveCfg = Release|x64
+		{5D4A857C-4981-860D-F26D-6C10DE83020F}.Release|x64.Build.0 = Release|x64
+		{5D4A857C-4981-860D-F26D-6C10DE83020F}.Test|x64.ActiveCfg = Test|x64
+		{5D4A857C-4981-860D-F26D-6C10DE83020F}.Test|x64.Build.0 = Test|x64
+		{154B857C-0182-860D-AA6E-6C109684020F}.Debug|x64.ActiveCfg = Debug|x64
+		{154B857C-0182-860D-AA6E-6C109684020F}.Debug|x64.Build.0 = Debug|x64
+		{154B857C-0182-860D-AA6E-6C109684020F}.Release|x64.ActiveCfg = Release|x64
+		{154B857C-0182-860D-AA6E-6C109684020F}.Release|x64.Build.0 = Release|x64
+		{154B857C-0182-860D-AA6E-6C109684020F}.Test|x64.ActiveCfg = Test|x64
+		{154B857C-0182-860D-AA6E-6C109684020F}.Test|x64.Build.0 = Test|x64
+		{26081C0E-921C-44BF-5B9E-E71EC77140F0}.Debug|x64.ActiveCfg = Debug|x64
+		{26081C0E-921C-44BF-5B9E-E71EC77140F0}.Debug|x64.Build.0 = Debug|x64
+		{26081C0E-921C-44BF-5B9E-E71EC77140F0}.Release|x64.ActiveCfg = Release|x64
+		{26081C0E-921C-44BF-5B9E-E71EC77140F0}.Release|x64.Build.0 = Release|x64
+		{26081C0E-921C-44BF-5B9E-E71EC77140F0}.Test|x64.ActiveCfg = Test|x64
+		{26081C0E-921C-44BF-5B9E-E71EC77140F0}.Test|x64.Build.0 = Test|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="lib">
+      <UniqueIdentifier>{3C8C880B-A895-887C-3111-9F7C9D19947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\splog">
+      <UniqueIdentifier>{50856AEB-BCEF-1E62-052E-D00771D7FCB6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\splog\Platform">
+      <UniqueIdentifier>{A4BB0BBF-909F-CC14-F9FF-C667E502B796}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\splog\Platform\Windows">
+      <UniqueIdentifier>{DEC95CA6-CAD9-0877-3393-6D951FC2F70F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Core">
+      <UniqueIdentifier>{A5D31CCF-91A0-77DA-BAB9-6582A6E5AC68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Core\SparkleRel">
+      <UniqueIdentifier>{09BD2558-751E-0366-FE8B-49186AEC3925}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Event">
+      <UniqueIdentifier>{3E1ADFB2-AA84-9329-F3C2-44CF5F6C717E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform">
+      <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\Windows">
+      <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor">
+      <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\GLAD">
+      <UniqueIdentifier>{1A7667C1-862B-E0B6-0F20-DA8D7BD4D6BA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\GLAD\include">
+      <UniqueIdentifier>{8D17AE63-F978-8B71-82E6-D123EE46C230}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\GLAD\include\KHR">
+      <UniqueIdentifier>{8124F434-ED5B-3CCC-F665-A0EF621C63C5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\GLAD\include\glad">
+      <UniqueIdentifier>{B4AA88D3-A0CF-D753-C91A-BDE3B59ED671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\glfw">
+      <UniqueIdentifier>{528F79C1-BE44-F2B6-4739-EC8DB3EDE8BA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\glfw\deps">
+      <UniqueIdentifier>{AD049DE9-99FD-BB3B-C22F-A1C0AE879B47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\glfw\deps\glad">
+      <UniqueIdentifier>{D4CB785F-4038-345A-092C-CCB7755756C2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\glfw\deps\mingw">
+      <UniqueIdentifier>{5E6CFD4E-4A66-26A1-33D3-BCB11F6C8C0D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\glfw\deps\vs2008">
+      <UniqueIdentifier>{2F813C44-9BB8-84DB-A4C2-E8FE1079ABD4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\glfw\include">
+      <UniqueIdentifier>{C5E801F8-314A-DF05-BAB7-25B8261816C5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\glfw\include\GLFW">
+      <UniqueIdentifier>{24E7751C-100C-C59C-3957-AA2C25DBC3BA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\glfw\src">
+      <UniqueIdentifier>{69A690F7-D531-FEBB-DE42-81B04A4D5ABC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Spark.h" />
+    <ClInclude Include="lib\splog\Platform\Windows\splogWindowsConfig.h">
+      <Filter>lib\splog\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\splog\splog.h">
+      <Filter>lib\splog</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\splog\splogConfig.h">
+      <Filter>lib\splog</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\splog\splogCore.h">
+      <Filter>lib\splog</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\splog\splogDecl.h">
+      <Filter>lib\splog</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\splog\splogLogger.h">
+      <Filter>lib\splog</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\splog\splogParsing.h">
+      <Filter>lib\splog</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Basics.h">
+      <Filter>src\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Layer.h">
+      <Filter>src\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Log.h">
+      <Filter>src\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\SparkleRel\Application.h">
+      <Filter>src\Core\SparkleRel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\SparkleRel\MainEntry.h">
+      <Filter>src\Core\SparkleRel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Window.h">
+      <Filter>src\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event\ApplicationEvent.h">
+      <Filter>src\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event\Event.h">
+      <Filter>src\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event\KeyEvent.h">
+      <Filter>src\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event\MouseEvent.h">
+      <Filter>src\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>src\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sppch.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\GLAD\include\KHR\khrplatform.h">
+      <Filter>vendor\GLAD\include\KHR</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\GLAD\include\glad\glad.h">
+      <Filter>vendor\GLAD\include\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\deps\getopt.h">
+      <Filter>vendor\glfw\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\deps\glad\gl.h">
+      <Filter>vendor\glfw\deps\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\deps\glad\gles2.h">
+      <Filter>vendor\glfw\deps\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\deps\glad\vulkan.h">
+      <Filter>vendor\glfw\deps\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\deps\linmath.h">
+      <Filter>vendor\glfw\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\deps\mingw\_mingw_dxhelper.h">
+      <Filter>vendor\glfw\deps\mingw</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\deps\mingw\dinput.h">
+      <Filter>vendor\glfw\deps\mingw</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\deps\mingw\xinput.h">
+      <Filter>vendor\glfw\deps\mingw</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\deps\nuklear.h">
+      <Filter>vendor\glfw\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\deps\nuklear_glfw_gl2.h">
+      <Filter>vendor\glfw\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\deps\stb_image_write.h">
+      <Filter>vendor\glfw\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\deps\tinycthread.h">
+      <Filter>vendor\glfw\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\deps\vs2008\stdint.h">
+      <Filter>vendor\glfw\deps\vs2008</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\include\GLFW\glfw3.h">
+      <Filter>vendor\glfw\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\include\GLFW\glfw3native.h">
+      <Filter>vendor\glfw\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\cocoa_joystick.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\cocoa_platform.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\cocoa_time.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\internal.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\linux_joystick.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\mappings.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\null_joystick.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\null_platform.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\platform.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\posix_poll.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\posix_thread.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\posix_time.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\win32_joystick.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\win32_platform.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\win32_thread.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\win32_time.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\wl_platform.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\x11_platform.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\glfw\src\xkb_unicode.h">
+      <Filter>vendor\glfw\src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Core\Layer.cpp">
+      <Filter>src\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Log.cpp">
+      <Filter>src\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\SparkleRel\Application.cpp">
+      <Filter>src\Core\SparkleRel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sppch.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

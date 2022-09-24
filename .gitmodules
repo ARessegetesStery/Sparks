@@ -1,0 +1,3 @@
+[submodule "Spark/vendor/glfw"]
+	path = Spark/vendor/glfw
+	url = git@github.com:ARessegetesStery/glfw.git
